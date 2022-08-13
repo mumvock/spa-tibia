@@ -1,0 +1,21 @@
+:root,
+html,
+body {
+    font-size: 16px;
+}
+
+html {
+    background-color: #051122;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: transparent;
+    background-image: url('./../images/base/background-artwork.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+}
