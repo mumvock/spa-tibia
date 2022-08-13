@@ -1,0 +1,26 @@
+:host {
+    display: grid;
+    grid-template-columns: 205px auto 200px;
+    grid-template-areas:
+        "header header header"
+        "nav content sidebar"
+        "nav content sidebar";
+    height: 100%;
+    width: 100%;
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: content;
+    }
+
+    aside {
+        grid-area: sidebar;
+    }
+}
