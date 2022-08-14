@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Martel';
+    src: url('./../fonts/martel.ttf');
+}
+
+@mixin bold {
+    font-weight: 700;
+}
+
+.tibia-h1,
+.tibia-h2,
+.tibia-h3 {
+    margin: 0;
+    line-height: unset;
+}
+
+.tibia-h3,
+.tibia-body,
+.tibia-caption {
+    font-family: Verdana, Arial, Times New Roman, sans-serif;
+}
+
+.tibia-h1 {
+    font-family: 'Martel';
+    font-size: 25px;
+    letter-spacing: .5px;
+    line-height: 26px;
+    margin: 0;
+    text-shadow: 0px 0px 0 #1e1e1e, 1px -1px 0 #1e1e1e, -1px -1px 0 #1e1e1e, 1px 1px 0 #1e1e1e
+}
+
+.tibia-h3 {
+    font-size: 14px;
+    @include bold;
+}
+
+.tibia-body {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.tibia-caption {
+    font-size: 10px;
+    line-height: 10px;
+}
+
+.tibia-first-letter {
+    &::first-letter {
+        font-family: 'Martel';
+        font-size: 38px;
+        letter-spacing: 2px;
+    }
+}
+
+.tibia-bold {
+    @include bold;
+}
