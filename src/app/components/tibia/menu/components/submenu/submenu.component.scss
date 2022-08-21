@@ -1,0 +1,16 @@
+@import './../../../assets/scss/transitions';
+
+:host {
+    display: block;
+    overflow: hidden;
+    transition: height $transition-duration $transition-timing-function;
+
+    &.closed {
+        height: 0 !important;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}

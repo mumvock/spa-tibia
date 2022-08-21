@@ -1,0 +1,35 @@
+@import './../../../assets/scss/fonts';
+@import './../../../assets/scss/buttons';
+
+:host {
+    > li {
+        background: url('./../../../assets/images/menu/menu-item-background.gif') no-repeat;
+        margin: 0 auto;
+        min-height: 32px;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+
+        &:hover {
+            background: url('./../../../assets/images/menu/menu-item-background-hover.gif') no-repeat;
+        }
+
+        &, ::ng-deep > a {
+            @include button;
+
+            &:hover {
+                color: #e1be97
+            }
+
+            align-items: center;
+            color: #d7b296;
+            display: flex;
+            flex-wrap: wrap;
+            font-family: 'Martel';
+            font-size: 18px;
+            letter-spacing: 1.5px;
+            line-height: 18px;
+            width: 100%;
+            @include stroke($default-stroke-width, #1e1e1e);
+        }
+    }
+}

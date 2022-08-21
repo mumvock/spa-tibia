@@ -1,11 +1,13 @@
 export type TibiaIconName =
     | 'gear'
     | 'book'
-    | 'account'
+    | 'dark-book'
+    | 'keys'
     | 'charactertrade'
     | 'community'
     | 'forum'
-    | 'gm'
-    | 'library'
+    | 'gamemaster'
     | 'map'
-    | 'trumpet';
+    | 'trumpet'
+    | 'gift-box'
+    | 'hammer';

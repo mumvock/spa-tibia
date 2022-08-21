@@ -1,0 +1,76 @@
+<a *ngIf="logo" routerLink="/" class="d-inline-flex">
+    <img [src]="logo.source" [alt]="logo.alt">
+</a>
+
+<tibia-chain-box>
+    <a class="tibia-button-large">
+        <span class="tibia-accent-text">Login</span>
+    </a>
+    <a routerLink="/" class="tibia-button mx-auto">Create account</a>
+</tibia-chain-box>
+
+<tibia-chain-box>
+    <a class="tibia-button-large">
+        <span class="tibia-accent-text">Download</span>
+    </a>
+</tibia-chain-box>
+
+<tibia-menu class="mx-auto">
+    <tibia-menu-item>
+        <tibia-icon [iconName]="'trumpet'"></tibia-icon>
+        <span class="col text-center">News</span>
+    </tibia-menu-item>
+    <tibia-submenu>
+        <tibia-submenu-item>
+            <a routerLink="/news" routerLinkActive="active">Latest news</a>
+        </tibia-submenu-item>
+        <tibia-submenu-item>
+            <a routerLink="/news-archive" routerLinkActive="active">News archive</a>
+        </tibia-submenu-item>
+        <tibia-submenu-item>
+            <a routerLink="/event-schedule" routerLinkActive="active">Event schedule</a>
+        </tibia-submenu-item>
+    </tibia-submenu>
+
+    <tibia-menu-item>
+        <a routerLink="/about">
+            <tibia-icon [iconName]="'book'"></tibia-icon>
+            <span class="col text-center">About tibia</span>
+        </a>
+    </tibia-menu-item>
+
+    <tibia-menu-item>
+        <tibia-icon [iconName]="'map'"></tibia-icon>
+        <span class="col text-center">Game guides</span>
+    </tibia-menu-item>
+
+    <tibia-menu-item>
+        <tibia-icon [iconName]="'dark-book'"></tibia-icon>
+        <span class="col text-center">Library</span>
+    </tibia-menu-item>
+
+    <tibia-menu-item>
+        <tibia-icon [iconName]="'community'"></tibia-icon>
+        <span class="col text-center">Community</span>
+    </tibia-menu-item>
+
+    <tibia-menu-item>
+        <tibia-icon [iconName]="'forum'"></tibia-icon>
+        <span class="col text-center">Forum</span>
+    </tibia-menu-item>
+
+    <tibia-menu-item>
+        <tibia-icon [iconName]="'keys'"></tibia-icon>
+        <span class="col text-center">Account</span>
+    </tibia-menu-item>
+
+    <tibia-menu-item>
+        <tibia-icon [iconName]="'charactertrade'"></tibia-icon>
+        <span class="col text-center">Char bazaar</span>
+    </tibia-menu-item>
+
+    <tibia-menu-item>
+        <tibia-icon [iconName]="'gamemaster'"></tibia-icon>
+        <span class="col text-center">Support</span>
+    </tibia-menu-item>
+</tibia-menu>

@@ -1,3 +1,9 @@
+@import './stroke';
+@import './colors';
+
+$default-font-family: Verdana, Arial, Times New Roman, sans-serif;
+$default-font-size: 14px;
+
 @font-face {
     font-family: 'Martel';
     src: url('./../fonts/martel.ttf');
@@ -5,6 +11,10 @@
 
 @mixin bold {
     font-weight: 700;
+}
+
+@mixin semibold {
+    font-weight: 600;
 }
 
 .tibia-h1,
@@ -17,16 +27,16 @@
 .tibia-h3,
 .tibia-body,
 .tibia-caption {
-    font-family: Verdana, Arial, Times New Roman, sans-serif;
+    font-family: $default-font-family;
 }
 
 .tibia-h1 {
     font-family: 'Martel';
     font-size: 25px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     line-height: 26px;
     margin: 0;
-    text-shadow: 0px 0px 0 #1e1e1e, 1px -1px 0 #1e1e1e, -1px -1px 0 #1e1e1e, 1px 1px 0 #1e1e1e
+    @include stroke($default-stroke-width, $default-stroke-color);
 }
 
 .tibia-h3 {
@@ -54,4 +64,21 @@
 
 .tibia-bold {
     @include bold;
+}
+
+.tibia-semibold {
+    @include bold;
+}
+
+.tibia-accent-text {
+    color: $accent-color;
+    font-family: 'Segoe UI', Roboto, Verdana, sans-serif;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    @include semibold;
+    @include stroke($default-stroke-width, $default-stroke-color);
+
+    &:hover {
+        color: $accent-hover-color;
+    }
 }

@@ -1,0 +1,71 @@
+@import './../../../assets/scss/fonts';
+
+:host {
+    &.active {
+        &,
+        > li,
+        > li > a {
+            color: white;
+        }
+
+        > li {
+            background: url('./../../../assets/images/menu/icon-activesubmenu.gif') no-repeat 3px center, #0d2e2b;
+
+            &:hover {
+                background: url('./../../../assets/images/menu/icon-activesubmenu.gif') no-repeat 3px center, #14433f;
+            }
+        }
+    }
+
+    > li {
+        &:hover {
+            background-color: #14433f;
+        }
+
+        &,
+        ::ng-deep a {
+            color: #d7d7d7;
+            font-family: Arial, sans-serif;
+            font-size: 13.33px;
+            cursor: pointer;
+            letter-spacing: initial;
+            line-height: initial;
+            text-decoration: none;
+            user-select: none;
+            text-shadow: none;
+            @include bold;
+
+            &:hover {
+                color: white;
+            }
+        }
+
+        background-color: #0d2e2b;
+        border-bottom: 1px solid #4b7874;
+        padding-bottom: 2px;
+        padding-left: 16px;
+        padding-top: 2px;
+        margin: 0 5px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            left: -5px;
+            width: 7px;
+            background: url('./../../../assets/images/chain-box/chain.gif') no-repeat round;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            right: -5px;
+            width: 7px;
+            background: url('./../../../assets/images/chain-box/chain.gif') no-repeat round;
+        }
+    }
+}

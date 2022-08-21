@@ -1,9 +1,13 @@
 :host {
+    $nav-width: 205px;
+    $sidebar-width: 200px;
+    $header-height: 155px;
+
     display: grid;
-    grid-template-columns: 205px auto 200px;
-    grid-template-rows: 155px auto;
+    grid-template-columns: $nav-width auto $sidebar-width;
+    grid-template-rows: $header-height auto;
     grid-template-areas:
-        "header header header"
+        "nav header sidebar"
         "nav content sidebar";
     height: 100%;
     margin: 0 auto;

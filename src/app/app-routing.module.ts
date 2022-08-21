@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
+        path: 'about',
+    },
+    {
         path: 'news',
         loadChildren: () => import('./pages/news/news.module').then(m => m.NewsModule),
     },

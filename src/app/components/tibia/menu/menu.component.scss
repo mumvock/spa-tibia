@@ -1,0 +1,18 @@
+:host {
+    background:
+        url('./../assets/images/chain-box/box-top.gif') no-repeat top,
+        url('./../assets/images/chain-box/box-bottom.gif') no-repeat bottom;
+    display: flex;
+    padding: 12px 0 0 0;
+    width: 180px;
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 170px;
+    }
+}
