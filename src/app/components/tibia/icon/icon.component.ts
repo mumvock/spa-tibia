@@ -9,7 +9,7 @@ interface Icon {
 }
 
 @Component({
-    selector: 'tibia-icon',
+    selector: 'tibia-icon, [tibiaIcon]',
     templateUrl: './icon.component.html',
     styleUrls: ['./icon.component.scss'],
 })

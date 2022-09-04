@@ -1,5 +1,3 @@
-@import './stroke';
-
 @mixin button {
     background-color: transparent;
     border: 0;
@@ -11,31 +9,37 @@
 
 .tibia-button-large {
     background: url('./../images/button/large-button.gif') no-repeat;
-    color: $accent-color;
+    color: $accent;
     display: flex;
     height: 37px;
     justify-content: center;
     width: 150px;
     @include button;
 
+    &::after {
+        content: '';
+        visibility: hidden;
+    }
+
+    &::after,
     &:hover {
         background: url('./../images/button/large-button-hover.gif') no-repeat;
 
         &, > * {
-            color: $accent-hover-color;
+            color: $accent-hover;
         }
     }
 }
 
 .tibia-button {
     font-family: Verdana;
-    color: $accent-color;
+    color: $accent;
     text-decoration: none;
     font-weight: 700;
     @include button;
     @include stroke(1, $default-stroke-color);
 
     &:hover {
-        color: $accent-hover-color;
+        color: $accent-hover;
     }
 }

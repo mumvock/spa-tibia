@@ -7,6 +7,7 @@ import { TibiaHeaderModule } from './../../components/tibia/header/header.module
 import { TibiaHeadlineModule } from './../../components/tibia/headline/headline.module';
 import { TibiaContainerModule } from './../../components/tibia/container/container.module';
 import { TibiaIconModule } from './../../components/tibia/icon/icon.module';
+import { TibiaBoxModule } from './../../components/tibia/box/box.module';
 
 import { NewsComponent } from './news.component';
 
@@ -20,6 +21,7 @@ import { NewsComponent } from './news.component';
         TibiaHeadlineModule,
         TibiaContainerModule,
         TibiaIconModule,
+        TibiaBoxModule,
     ],
 })
 export class NewsModule {}

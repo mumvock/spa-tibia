@@ -13,6 +13,7 @@ import { NavComponent } from './nav.component';
     exports: [NavComponent],
     imports: [
         CommonModule,
+        RouterModule,
         TibiaChainBoxModule,
         TibiaMenuModule,
         TibiaIconModule,

@@ -6,6 +6,7 @@ body {
 
 html,
 body {
+    background-color: transparent;
     height: 100%;
 }
 
@@ -17,6 +18,27 @@ html {
 }
 
 
-body {
-    background-color: transparent;
+div#tibia-custom-background {
+    display: none;
+    background-color: #051122;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -100;
+
+    &::before {
+        content: '';
+        background-image: url('./../images/ClientBackground_SummerUpdate2011.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 116%;
+        filter: blur(3px) brightness(.85);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 }

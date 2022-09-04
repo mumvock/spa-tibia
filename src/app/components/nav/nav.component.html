@@ -15,62 +15,60 @@
     </a>
 </tibia-chain-box>
 
-<tibia-menu class="mx-auto">
-    <tibia-menu-item>
+<ul tibiaMenu>
+    <li tibiaMenuItem>
         <tibia-icon [iconName]="'trumpet'"></tibia-icon>
-        <span class="col text-center">News</span>
-    </tibia-menu-item>
-    <tibia-submenu>
-        <tibia-submenu-item>
-            <a routerLink="/news" routerLinkActive="active">Latest news</a>
-        </tibia-submenu-item>
-        <tibia-submenu-item>
-            <a routerLink="/news-archive" routerLinkActive="active">News archive</a>
-        </tibia-submenu-item>
-        <tibia-submenu-item>
-            <a routerLink="/event-schedule" routerLinkActive="active">Event schedule</a>
-        </tibia-submenu-item>
-    </tibia-submenu>
+        <span>News</span>
+    </li>
+    <ul tibiaSubmenu routerLinkActive="active">
+        <li><a [routerLink]="['news', 'latest']" routerLinkActive="active">Latest news</a></li>
+        <li><a [routerLink]="['news', 'archive']" routerLinkActive="active">News archive</a></li>
+        <li><a [routerLink]="['news', 'event-schedule']" routerLinkActive="active">Event schedule</a></li>
+    </ul>
 
-    <tibia-menu-item>
-        <a routerLink="/about">
-            <tibia-icon [iconName]="'book'"></tibia-icon>
-            <span class="col text-center">About tibia</span>
-        </a>
-    </tibia-menu-item>
+    <li tibiaMenuItem>
+        <tibia-icon [iconName]="'book'"></tibia-icon>
+        <span>About tibia</span>
+    </li>
+    <ul tibiaSubmenu routerLinkActive="active">
+        <li><a [routerLink]="['about-tibia', 'what-is-tibia']" routerLinkActive="active">What is tibia?</a></li>
+        <li><a [routerLink]="['about-tibia', 'screenshots']" routerLinkActive="active">Screenshots</a></li>
+        <li><a [routerLink]="['about-tibia', 'game-features']" routerLinkActive="active">Game features</a></li>
+        <li><a [routerLink]="['about-tibia', 'premium-features']" routerLinkActive="active">Premium features</a></li>
+    </ul>
 
-    <tibia-menu-item>
+    <li tibiaMenuItem>
         <tibia-icon [iconName]="'map'"></tibia-icon>
-        <span class="col text-center">Game guides</span>
-    </tibia-menu-item>
+        <span>Game guides</span>
+    </li>
 
-    <tibia-menu-item>
+    <li tibiaMenuItem>
         <tibia-icon [iconName]="'dark-book'"></tibia-icon>
-        <span class="col text-center">Library</span>
-    </tibia-menu-item>
+        <span>Library</span>
+    </li>
 
-    <tibia-menu-item>
+    <li tibiaMenuItem>
         <tibia-icon [iconName]="'community'"></tibia-icon>
-        <span class="col text-center">Community</span>
-    </tibia-menu-item>
+        <span>Community</span>
+    </li>
 
-    <tibia-menu-item>
+    <li tibiaMenuItem>
         <tibia-icon [iconName]="'forum'"></tibia-icon>
-        <span class="col text-center">Forum</span>
-    </tibia-menu-item>
+        <span>Forum</span>
+    </li>
 
-    <tibia-menu-item>
+    <li tibiaMenuItem>
         <tibia-icon [iconName]="'keys'"></tibia-icon>
-        <span class="col text-center">Account</span>
-    </tibia-menu-item>
+        <span>Account</span>
+    </li>
 
-    <tibia-menu-item>
+    <li tibiaMenuItem>
         <tibia-icon [iconName]="'charactertrade'"></tibia-icon>
-        <span class="col text-center">Char bazaar</span>
-    </tibia-menu-item>
+        <span>Char bazaar</span>
+    </li>
 
-    <tibia-menu-item>
+    <li tibiaMenuItem>
         <tibia-icon [iconName]="'gamemaster'"></tibia-icon>
-        <span class="col text-center">Support</span>
-    </tibia-menu-item>
-</tibia-menu>
+        <span>Support</span>
+    </li>
+</ul>

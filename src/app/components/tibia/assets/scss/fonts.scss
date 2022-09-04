@@ -7,6 +7,8 @@ $default-font-size: 14px;
 @font-face {
     font-family: 'Martel';
     src: url('./../fonts/martel.ttf');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @mixin bold {
@@ -40,12 +42,12 @@ $default-font-size: 14px;
 }
 
 .tibia-h3 {
-    font-size: 14px;
+    font-size: $default-font-size;
     @include bold;
 }
 
 .tibia-body {
-    font-size: 14px;
+    font-size: $default-font-size;
     line-height: 18px;
 }
 
@@ -55,9 +57,12 @@ $default-font-size: 14px;
 }
 
 .tibia-first-letter {
+    display: block;
+
     &::first-letter {
         font-family: 'Martel';
         font-size: 38px;
+        line-height: 38px;
         letter-spacing: 2px;
     }
 }
@@ -71,7 +76,7 @@ $default-font-size: 14px;
 }
 
 .tibia-accent-text {
-    color: $accent-color;
+    color: $accent;
     font-family: 'Segoe UI', Roboto, Verdana, sans-serif;
     font-size: 1.6rem;
     line-height: 3rem;
@@ -79,6 +84,22 @@ $default-font-size: 14px;
     @include stroke($default-stroke-width, $default-stroke-color);
 
     &:hover {
-        color: $accent-hover-color;
+        color: $accent-hover;
     }
+}
+
+a.tibia-anchor {
+    color: $anchor;
+    text-decoration: none;
+    @include bold;
+
+    &:hover {
+        color: $anchor-hover;
+        text-decoration: underline;
+    }
+}
+
+.tibia-creature-quote {
+    color: $creature-quote;
+    @include bold;
 }

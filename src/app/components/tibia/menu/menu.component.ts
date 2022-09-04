@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'tibia-menu',
-    template: `
-        <ul>
-            <ng-content></ng-content>
-        </ul>
-    `,
-    styleUrls: ['./menu.component.scss'],
+    selector: 'ul[tibiaMenu]',
+    template: `<ng-content></ng-content>`,
+    styleUrls: ['./menu.component.scss']
 })
 export class TibiaMenuComponent {}

@@ -5,9 +5,19 @@ import { NewsComponent } from './news.component';
 
 const routes: Routes = [
     {
-        path: '',
+        path: 'archive',
+        loadChildren: () =>
+            import('./pages/news-archive.module').then((m) => m.NewsArchiveModule),
+    },
+    {
+        path: 'latest',
         component: NewsComponent,
-    }
+    },
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'latest',
+    },
 ];
 
 @NgModule({
