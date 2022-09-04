@@ -11,7 +11,6 @@ interface Icon {
 @Component({
     selector: 'tibia-icon, [tibiaIcon]',
     templateUrl: './icon.component.html',
-    styleUrls: ['./icon.component.scss'],
 })
 export class TibiaIconComponent {
     @Input()
