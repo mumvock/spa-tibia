@@ -1,0 +1,17 @@
+ul:host {
+    background:
+        url('./../assets/images/chain-box/box-top.gif') no-repeat top,
+        url('./../assets/images/chain-box/box-bottom.gif') no-repeat bottom;
+    padding: 12px 5px;
+    margin: 0 auto;
+    width: 180px;
+
+    ::ng-deep {
+        ul, li, a {
+            list-style: none;
+            text-decoration: none;
+            user-select: none;
+            cursor: pointer;
+        }
+    }
+}

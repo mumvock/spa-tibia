@@ -1,0 +1,17 @@
+:host {
+    user-select: none;
+
+    > a:first-of-type {
+        margin-top: 3px;
+        margin-left: 2px;
+    }
+
+    > tibia-chain-box {
+        margin-left: auto;
+        margin-right: auto;
+
+        &:first-of-type {
+            margin-top: -9px;
+        }
+    }
+}

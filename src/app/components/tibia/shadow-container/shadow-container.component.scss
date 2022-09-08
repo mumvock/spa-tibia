@@ -1,0 +1,21 @@
+:host {
+    background-color: #d4c0a1;
+    border: 1px solid #5f4d41;
+    box-shadow: 3px 3px 2px #875f3e;
+    display: block;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: '';
+        border: 1px solid #faf0d7;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+}

@@ -1,0 +1,33 @@
+:host {
+    $nav-width: 205px;
+    $sidebar-width: 200px;
+    $header-height: 155px;
+
+    display: grid;
+    grid-template-columns: $nav-width auto $sidebar-width;
+    grid-template-rows: $header-height auto;
+    grid-template-areas:
+        "nav header sidebar"
+        "nav content sidebar";
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: content;
+        overflow: hidden;
+    }
+
+    aside {
+        grid-area: sidebar;
+    }
+}

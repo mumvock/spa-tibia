@@ -1,0 +1,68 @@
+@import './../../../assets/scss/transitions';
+
+ul:host {
+    overflow: hidden;
+    padding-left: 0;
+    transition: height $transition-duration $transition-timing-function;
+
+    &.closed {
+        height: 0 !important;
+    }
+
+    // submenu-item
+    ::ng-deep > li {
+        background-color: #0d2e2b;
+        border-bottom: 1px solid #4b7874;
+        display: flex;
+        margin: 0 5px;
+        position: relative;
+
+        &:hover {
+            background-color: #14433f;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            left: -4px;
+            width: 7px;
+            background: url('./../../../assets/images/chain-box/chain.gif') no-repeat round;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            right: -5px;
+            width: 7px;
+            background: url('./../../../assets/images/chain-box/chain.gif') no-repeat round;
+        }
+
+        > a {
+            color: #d7d7d7;
+            font-family: Arial, sans-serif;
+            flex: 1;
+            font-size: 13.33px;
+            font-weight: 700;
+            letter-spacing: initial;
+            line-height: initial;
+            padding-left: 16px;
+            padding-top: 1px;
+            text-shadow: none;
+
+            &:hover {
+                color: white;
+            }
+
+            &.active {
+                background-image: url('./../../../assets/images/menu/icon-activesubmenu.gif');
+                background-repeat: no-repeat;
+                background-position: 4px 4px;
+                color: white;
+            }
+        }
+    }
+}

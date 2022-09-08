@@ -1,0 +1,63 @@
+@import './../../../assets/scss/stroke';
+
+li:host {
+    background: url('./../../../assets/images/menu/menu-item-background.gif') no-repeat;
+    min-height: 32px;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: relative;
+
+    &::after {
+        content: '';
+        visibility: hidden;
+    }
+
+    &::after,
+    &:hover {
+        background: url('./../../../assets/images/menu/menu-item-background-hover.gif') no-repeat;
+    }
+
+    &.toggleable {
+        &::before {
+            content: '';
+            background-image: url('./../../../assets/images/menu/plus.gif');
+            background-repeat: no-repeat;
+            bottom: 0;
+            display: block;
+            height: 12px;
+            position: absolute;
+            right: -2px;
+            width: 12px;
+        }
+
+        &.opened::before {
+            background-image: url('./../../../assets/images/menu/minus.gif');
+        }
+    }
+
+    &, ::ng-deep > a {
+        align-items: center;
+        color: #d7b296;
+        display: flex;
+        font-family: 'Martel';
+        font-size: 18px;
+        letter-spacing: 1.5px;
+        line-height: 18px;
+        text-align: center;
+        justify-content: center;
+        @include stroke($default-stroke-width, #1e1e1e);
+
+        &:hover {
+            color: #e1be97
+        }
+
+        & ::ng-deep > :not(tibia-icon) {
+            flex: 1;
+            text-align: center;
+        }
+    }
+
+    ::ng-deep > a {
+        flex: 1;
+    }
+}

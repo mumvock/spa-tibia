@@ -1,0 +1,26 @@
+:host {
+    background:
+        url('./../assets/images/chain-box/box-top.gif') no-repeat top,
+        url('./../assets/images/chain-box/box-bottom.gif') no-repeat bottom,
+        url('./../assets/images/chain-box/chain.gif') no-repeat repeat 5px 12px,
+        url('./../assets/images/chain-box/chain.gif') no-repeat repeat calc(100% - 5px) 12px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    padding: 1.1rem 1.3rem 1.1rem 1.25rem;
+    position: relative;
+    width: 180px;
+
+    &::after {
+        content: '';
+        background: url('./../assets/images/chain-box/box-background.gif') no-repeat repeat;
+        bottom: 12px;
+        left: 10px;
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        z-index: -2;
+    }
+}

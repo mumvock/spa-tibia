@@ -23,7 +23,15 @@
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
-                        "assets": ["src/favicon.ico", "src/assets"],
+                        "assets": [
+                            "src/favicon.ico",
+                            "src/assets",
+                            {
+                                "glob": "**/*",
+                                "input": "./src/app/components/tibia/assets",
+                                "output": "/assets/"
+                            }
+                        ],
                         "styles": ["src/styles.scss"],
                         "scripts": []
                     },
@@ -47,11 +55,26 @@
                                     "with": "src/environments/environment.prod.ts"
                                 }
                             ],
+                            "optimization": {
+                                "scripts": true,
+                                "styles": {
+                                    "minify": true,
+                                    "inlineCritical": false
+                                },
+                                "fonts": true
+                            },
                             "outputHashing": "all"
                         },
                         "development": {
                             "buildOptimizer": false,
-                            "optimization": false,
+                            "optimization": {
+                                "scripts": true,
+                                "styles": {
+                                    "minify": true,
+                                    "inlineCritical": false
+                                },
+                                "fonts": true
+                            },
                             "vendorChunk": true,
                             "extractLicenses": false,
                             "sourceMap": true,

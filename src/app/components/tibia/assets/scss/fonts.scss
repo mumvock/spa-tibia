@@ -1,0 +1,105 @@
+@import './stroke';
+@import './colors';
+
+$default-font-family: Verdana, Arial, Times New Roman, sans-serif;
+$default-font-size: 14px;
+
+@font-face {
+    font-family: 'Martel';
+    src: url('./../fonts/martel.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin bold {
+    font-weight: 700;
+}
+
+@mixin semibold {
+    font-weight: 600;
+}
+
+.tibia-h1,
+.tibia-h2,
+.tibia-h3 {
+    margin: 0;
+    line-height: unset;
+}
+
+.tibia-h3,
+.tibia-body,
+.tibia-caption {
+    font-family: $default-font-family;
+}
+
+.tibia-h1 {
+    font-family: 'Martel';
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    line-height: 26px;
+    margin: 0;
+    @include stroke($default-stroke-width, $default-stroke-color);
+}
+
+.tibia-h3 {
+    font-size: $default-font-size;
+    @include bold;
+}
+
+.tibia-body {
+    font-size: $default-font-size;
+    line-height: 18px;
+}
+
+.tibia-caption {
+    font-size: 10px;
+    line-height: 10px;
+}
+
+.tibia-first-letter {
+    display: block;
+
+    &::first-letter {
+        font-family: 'Martel';
+        font-size: 38px;
+        line-height: 38px;
+        letter-spacing: 2px;
+    }
+}
+
+.tibia-bold {
+    @include bold;
+}
+
+.tibia-semibold {
+    @include bold;
+}
+
+.tibia-accent-text {
+    color: $accent;
+    font-family: 'Segoe UI', Roboto, Verdana, sans-serif;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    @include semibold;
+    @include stroke($default-stroke-width, $default-stroke-color);
+
+    &:hover {
+        color: $accent-hover;
+    }
+}
+
+a.tibia-anchor {
+    color: $anchor;
+    text-decoration: none;
+    @include bold;
+
+    &:hover {
+        color: $anchor-hover;
+        text-decoration: underline;
+    }
+}
+
+.tibia-creature-quote {
+    color: $creature-quote;
+    @include bold;
+}

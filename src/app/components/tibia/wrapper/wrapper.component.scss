@@ -1,0 +1,27 @@
+:host {
+    background:
+        url('./../assets/images/wrapper/corner-tl.gif') no-repeat left top,
+        url('./../assets/images/wrapper/corner-tr.gif') no-repeat right top,
+        url('./../assets/images/wrapper/corner-bl.gif') no-repeat left bottom,
+        url('./../assets/images/wrapper/corner-br.gif') no-repeat right bottom,
+        url('./../assets/images/wrapper/border-top.gif') repeat-x center 4px,
+        url('./../assets/images/wrapper/border-bottom.gif') repeat-x center calc(100% - 4px);
+    display: block;
+    padding: 10px 5px;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: '';
+        background-color: #debb9d;
+        border-left: 2px solid #3a3738;
+        border-right: 2px solid #3a3738;
+        bottom: 10px;
+        display: block;
+        left: 3px;
+        position: absolute;
+        right: 3px;
+        top: 10px;
+        z-index: -2;
+    }
+}
