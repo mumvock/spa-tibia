@@ -1,23 +1,28 @@
-<article tibiaWrapper>
+<section tibiaWrapper>
     <header tibiaHeader>
         <h1 class="tibia-h1">News</h1>
     </header>
 
-    <tibia-container>
-        <tibia-headline>
+    <article tibiaContainer>
+        <header tibiaHeadline>
             <tibia-icon [iconName]="'gear'" class="me-1"></tibia-icon>
-            <time class="tibia-caption">Aug 12 2022&nbsp;&#45;&nbsp;</time>
+            <time class="tibia-caption" datetime="2022-08-12">Aug 12 2022&nbsp;&#45;&nbsp;</time>
             <h3 class="tibia-h3 text-truncate col">New Mounts</h3>
-        </tibia-headline>
+        </header>
 
         <div class="px-3">
             <p class="tibia-body tibia-first-letter">New mounts have been added to the Store today!</p>
             <p class="tibia-body">A seasoned warrior knows how to make an entry, and so does a faithful companion: Fully armored! Saddle up your impressive Jousting Horse to charge into battle in style, gallop into the arena on the back of your striking Tourney Horse, and ride your distinguished Parade Horse through the streets of Thais to show off your chivalrous qualities. With a horse in full barding, nobody will ever rain on your parade again.</p>
         </div>
 
-        <tibia-box>
-            <header tibiaBoxHeader>Running World Events</header>
-            A powerful ancient weapon meant to be sleeping forever has awoken deep under Vengoth. Portals all over the world lead to fragments of its shattered soul. With thirst for revenge and burning rage she will destroy the world - unless you fight her back.
-        </tibia-box>
-    </tibia-container>
-</article>
+        <section tibiaFrame>
+            <h3 *tibiaFrameHeader class="tibia-h3 text-truncate col">New Mounts</h3>
+
+            <p class="tibia-body">Teste</p>
+
+            <tibia-shadow-container>
+                Teste 2
+            </tibia-shadow-container>
+        </section>
+    </article>
+</section>

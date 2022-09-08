@@ -1,0 +1,51 @@
+:host {
+    > [tibiaBox]:first-of-type,
+    > tibia-box:first-of-type {
+        color: white;
+        padding-left: 14px;
+
+        &::before {
+            background-color: #5f4d41;
+        }
+    }
+
+    > div:first-of-type {
+        $external-border: 1px solid #000;
+        $internal-border: 2px solid #55636c;
+
+        border: $external-border;
+        border-top: 0;
+        margin: 0 1px;
+        padding: 8px;
+        position: relative;
+        z-index: 0;
+
+        &::before {
+            content: '';
+            background-color: #f1e0c5;
+            border: $internal-border;
+            border-top: 0;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        &.without-header {
+            border-top: $external-border;
+
+            &::before {
+                border-top: $internal-border;
+            }
+        }
+
+        ::ng-deep {
+            > [tibiaShadowContainer],
+            > tibia-shadow-container {
+                padding: 6px;
+            }
+        }
+    }
+}

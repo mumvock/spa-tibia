@@ -1,26 +1,26 @@
 :host {
     background:
-        url('./../assets/images/chain-box/box-top.gif') no-repeat top,
-        url('./../assets/images/chain-box/box-bottom.gif') no-repeat bottom,
-        url('./../assets/images/chain-box/chain.gif') no-repeat repeat 5px 12px,
-        url('./../assets/images/chain-box/chain.gif') no-repeat repeat calc(100% - 5px) 12px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    padding: 1.1rem 1.3rem 1.1rem 1.25rem;
+        url('./../assets/images/box/box-edge.gif') no-repeat bottom left,
+        url('./../assets/images/box/box-edge.gif') no-repeat bottom right,
+        url('./../assets/images/box/box-edge.gif') no-repeat top left,
+        url('./../assets/images/box/box-edge.gif') no-repeat top right,
+        url('./../assets/images/box/box-vertical.gif') no-repeat repeat 1px 5px,
+        url('./../assets/images/box/box-vertical.gif') no-repeat repeat calc(100% - 1px) 5px,
+        url('./../assets/images/box/box-horizontal.gif') repeat no-repeat 5px 1px,
+        url('./../assets/images/box/box-horizontal.gif') repeat no-repeat 5px calc(100% - 1px);
+    display: block;
+    padding: 5px 4px;
     position: relative;
-    width: 180px;
+    z-index: 0;
 
-    &::after {
+    &::before {
         content: '';
-        background: url('./../assets/images/chain-box/box-background.gif') no-repeat repeat;
-        bottom: 12px;
-        left: 10px;
+        background-color: #d4c0a1;
+        bottom: 5px;
+        left: 4px;
         position: absolute;
-        right: 10px;
-        top: 12px;
-        z-index: -2;
+        right: 4px;
+        top: 5px;
+        z-index: -1;
     }
 }
